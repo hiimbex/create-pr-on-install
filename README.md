@@ -31,6 +31,11 @@ module.exports = robot => {
 }
 ```
 
+## See it in action 
+
+<img width="793" alt="screen shot 2018-06-18 at 10 42 16 am" src="https://user-images.githubusercontent.com/13410355/41567121-8ef619be-7313-11e8-918d-2f6b0a566eb6.png">
+<img width="1018" alt="screen shot 2018-06-18 at 10 42 27 am" src="https://user-images.githubusercontent.com/13410355/41567120-8edb797e-7313-11e8-8338-576c61c70c49.png">
+
 ## Contributing
 
 If you have suggestions for how create-pr-on-install could be improved, or want to report a bug, open an issue! We'd love all and any contributions.
