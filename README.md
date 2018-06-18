@@ -4,12 +4,31 @@
 
 ## Setup
 
-```sh
-# Install dependencies
-npm install
+To use this extension, require the npm module 'create-pr-on-install'. Then call
+it by passing in the `context`, as well as an object containing information
+specific to your app.
 
-# Run the bot
-npm start
+``` js
+const createPR = require('create-pr-on-install')
+
+module.exports = robot => {
+  robot.on('installation.created', context => {
+    // This extension can open PRs with new files at any point in time, but this
+    // use case demonstrates creating one when the app is first installed on a repo
+    const openPR = await createPR(context, {
+      fields = {
+        file: {
+          path: 'path/to/file.yml',
+          content: 'This is what will be in the file'
+        },
+        pr : {
+          body: 'The body of your Pull request',
+          title: 'The title of your Pull Request'
+        }
+      }
+    })
+  })
+}
 ```
 
 ## Contributing
